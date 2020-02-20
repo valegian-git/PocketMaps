@@ -1,40 +1,13 @@
-# PocketMaps
-Free offline maps with routing functions and more ...
+# RideAlong
+Free offline maps with multiple user navigation functions.
 
-![](documentation/icon_pocketmaps_dark_512.png)
+![](documentation/icon_ridealong.png)
 
-This project uses [OSM](https://www.openstreetmap.org/) data, [Mapsforge-vtm](https://github.com/mapsforge/vtm)
+This project is built on top of [PocketMaps] (https://github.com/junjunguo/PocketMaps) and uses [OSM](https://www.openstreetmap.org/) data, [Mapsforge-vtm](https://github.com/mapsforge/vtm)
 and [Graphhopper](https://graphhopper.com/) open source API.
 
-[<img alt="Get it on Google Play" height="80" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png">](https://play.google.com/store/apps/details?id=com.starcom.pocketmaps)
-[<img alt="Get it on F-Droid" height="80" src="https://f-droid.org/badge/get-it-on.png">](https://f-droid.org/packages/com.junjunguo.pocketmaps/)
-
-# Screenshots
-### resumable downloading
-#### downloading: / paused:
-![](documentation/PocketMaps_download_view_v10.png)
-![](documentation/PocketMaps_download_view_s_v10.png)
-
-### map view: / settings:
-![](documentation/map2-2015-07-01-012721.png)
-![](documentation/pocketMaps_map_settings.png)
-
-### search by coordinate: / pathfinding:
-![](documentation/search_by_coordinate_2015-10-01-15-19-45.png)
-![](documentation/pathfinding_2015-10-01-15-24-31.png)
-
-### turn by turn directions: / turn by turn navigation:
-![](documentation/PocketMaps_nav_directions.png)
-![](documentation/PocketMaps_navi.png)
-
-### tracking: / sport analysis:
-![](documentation/pocketMaps_tracking_analytics.png)
-![](documentation/pocketMaps_sport_tracking.png)
-
-# Maps
-## how to Create Maps
-
-[step by step discription](documentation/create_maps.md)
+[<img alt="Get it on Google Play" height="80" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png">](https://play.google.com/store/apps/)
+[<img alt="Get it on F-Droid" height="80" src="https://f-droid.org/badge/get-it-on.png">](https://f-droid.org/)
 
 # License
 [The MIT License (MIT)](LICENSE)
