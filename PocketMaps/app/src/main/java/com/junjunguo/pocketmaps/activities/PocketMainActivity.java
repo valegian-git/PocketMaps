@@ -9,9 +9,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -26,7 +25,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.junjunguo.pocketmaps.R;
@@ -58,7 +56,7 @@ import java.util.List;
  * <p/>This file is part of PocketMaps
  * <br/>Created by GuoJunjun <junjunguo.com> on July 04, 2015.
  */
-public class MainActivity extends AppCompatActivity implements OnClickMapListener {
+public class PocketMainActivity extends AppCompatActivity implements OnClickMapListener {
     public final static int ITEM_TOUCH_HELPER_LEFT = 4;
     public final static int ITEM_TOUCH_HELPER_RIGHT = 8;
     private MyMapAdapter mapAdapter;
@@ -530,13 +528,13 @@ public class MainActivity extends AppCompatActivity implements OnClickMapListene
         @Override
         public void logUserThread(String txt)
         {
-          MainActivity.this.logUserThread(txt);
+          PocketMainActivity.this.logUserThread(txt);
         }
 
         @Override
         public void updateMapStatus(MyMap map)
         {
-          MainActivity.this.logUserThread(map.getMapName() + ": " + map.getStatus());
+          PocketMainActivity.this.logUserThread(map.getMapName() + ": " + map.getStatus());
           if (map.getStatus() == DlStatus.Complete)
           {
             mapAdapter.insert(map);
@@ -587,11 +585,11 @@ public class MainActivity extends AppCompatActivity implements OnClickMapListene
      * @param str
      */
     private static void log(String str) {
-        Log.i(MainActivity.class.getName(), str);
+        Log.i(PocketMainActivity.class.getName(), str);
     }
 
     private void logUser(String str) {
-      Log.i(MainActivity.class.getName(), str);
+      Log.i(PocketMainActivity.class.getName(), str);
       try
       {
         Toast.makeText(getBaseContext(), str, Toast.LENGTH_SHORT).show();

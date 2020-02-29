@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.junjunguo.pocketmaps.R;
-import com.junjunguo.pocketmaps.activities.MainActivity;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

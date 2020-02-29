@@ -88,7 +88,7 @@ public class MapActivity extends Activity implements LocationListener {
           log("Error while loading map!");
           e.printStackTrace();
           finish();
-          Intent intent = new Intent(this, MainActivity.class);
+          Intent intent = new Intent(this, PocketMainActivity.class);
           intent.putExtra("com.junjunguo.pocketmaps.activities.MapActivity.SELECTNEWMAP", true);
           startActivity(intent);
           return;

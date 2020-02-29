@@ -1,6 +1,6 @@
 package com.junjunguo.pocketmaps.downloader;
 
-import com.junjunguo.pocketmaps.activities.MainActivity;
+import com.junjunguo.pocketmaps.activities.PocketMainActivity;
 
 import android.R;
 import android.annotation.TargetApi;
@@ -60,7 +60,7 @@ public class ProgressPublisher
   private void updateNotification(String title, String text, boolean ongoing)
   {
     PendingIntent contentIntent = PendingIntent.getActivity(c, 0,
-                    new Intent(c, MainActivity.class),   PendingIntent.FLAG_UPDATE_CURRENT);
+                    new Intent(c, PocketMainActivity.class),   PendingIntent.FLAG_UPDATE_CURRENT);
     NotificationManager nMgr = (NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
     Notification.Builder mBuilder = createNotification(c, nMgr).setSmallIcon(R.drawable.ic_dialog_info)
                     .setContentTitle(title).setContentText(text).setContentIntent(contentIntent).setOngoing(ongoing);

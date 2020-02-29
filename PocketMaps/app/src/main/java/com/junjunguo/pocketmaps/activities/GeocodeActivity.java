@@ -27,7 +27,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.location.Address;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -141,7 +140,7 @@ public class GeocodeActivity  extends AppCompatActivity implements OnClickListen
         }
       }
     };
-    MainActivity.addDeleteItemHandler(this, recView, delL);
+    PocketMainActivity.addDeleteItemHandler(this, recView, delL);
   }
 
   private void showSearchEngine()
