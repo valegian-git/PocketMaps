@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: org.conscrypt:conscrypt-android:2.2.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/conscrypt-android-2.2.1.aar/457c25367e6db8c05bd52dd46ef0fab6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/conscrypt-android-2.2.1.aar/457c25367e6db8c05bd52dd46ef0fab6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d77a7f0683565c873df4f116ea0c0e3e/conscrypt-android-2.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d77a7f0683565c873df4f116ea0c0e3e/conscrypt-android-2.2.1/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.conscrypt/conscrypt-android/2.2.1/6227378b27dc80522cf488007730c31ffa21c4b0/conscrypt-android-2.2.1-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.conscrypt/conscrypt-android/2.2.1/ff36046822c994d3ea26529e1cbf45f3d0b80173/conscrypt-android-2.2.1-sources.jar!/" />
     </SOURCES>

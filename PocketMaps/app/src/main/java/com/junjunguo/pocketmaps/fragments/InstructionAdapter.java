@@ -1,11 +1,12 @@
 package com.junjunguo.pocketmaps.fragments;
 
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.graphhopper.util.Instruction;
 import com.graphhopper.util.InstructionList;

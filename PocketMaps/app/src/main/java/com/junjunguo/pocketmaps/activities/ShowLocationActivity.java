@@ -1,16 +1,17 @@
 package com.junjunguo.pocketmaps.activities;
 
-import java.util.Properties;
-import java.util.Set;
-
-import org.oscim.core.GeoPoint;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import org.oscim.core.GeoPoint;
+
+import java.util.Properties;
+import java.util.Set;
 
 public class ShowLocationActivity  extends AppCompatActivity
 {

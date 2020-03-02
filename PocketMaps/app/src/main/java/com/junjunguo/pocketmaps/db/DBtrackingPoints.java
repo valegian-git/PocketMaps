@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
-import android.util.Log;
 
 import com.jjoe64.graphview.series.DataPoint;
 import com.junjunguo.pocketmaps.map.Tracking;

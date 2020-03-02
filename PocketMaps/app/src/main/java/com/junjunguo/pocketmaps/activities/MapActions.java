@@ -6,10 +6,6 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.location.Address;
 import android.location.Location;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.appcompat.app.AlertDialog;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -22,27 +18,32 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.junjunguo.pocketmaps.R;
 import com.junjunguo.pocketmaps.fragments.AppSettings;
 import com.junjunguo.pocketmaps.fragments.AppSettings.SettType;
+import com.junjunguo.pocketmaps.fragments.InstructionAdapter;
+import com.junjunguo.pocketmaps.fragments.SpinnerAdapter;
 import com.junjunguo.pocketmaps.map.Destination;
+import com.junjunguo.pocketmaps.map.MapHandler;
+import com.junjunguo.pocketmaps.map.Navigator;
 import com.junjunguo.pocketmaps.model.SportCategory;
 import com.junjunguo.pocketmaps.model.listeners.MapHandlerListener;
 import com.junjunguo.pocketmaps.model.listeners.NavigatorListener;
 import com.junjunguo.pocketmaps.model.listeners.OnClickAddressListener;
 import com.junjunguo.pocketmaps.navigator.NaviEngine;
-import com.junjunguo.pocketmaps.map.MapHandler;
-import com.junjunguo.pocketmaps.map.Navigator;
-import com.junjunguo.pocketmaps.fragments.InstructionAdapter;
-import com.junjunguo.pocketmaps.fragments.SpinnerAdapter;
 import com.junjunguo.pocketmaps.util.Calorie;
 import com.junjunguo.pocketmaps.util.Variable;
-
-import java.util.ArrayList;
 
 import org.oscim.android.MapView;
 import org.oscim.core.GeoPoint;
 import org.oscim.core.MapPosition;
+
+import java.util.ArrayList;
 
 /**
  * This file is part of PocketMaps

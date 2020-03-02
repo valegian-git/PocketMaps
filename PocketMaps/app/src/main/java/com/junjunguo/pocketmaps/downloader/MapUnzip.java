@@ -1,5 +1,14 @@
 package com.junjunguo.pocketmaps.downloader;
 
+import android.annotation.TargetApi;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.os.Build;
+import android.service.notification.StatusBarNotification;
+
+import com.junjunguo.pocketmaps.model.MyMap;
+import com.junjunguo.pocketmaps.util.Variable;
+
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -7,16 +16,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-
-import com.junjunguo.pocketmaps.model.MyMap;
-import com.junjunguo.pocketmaps.util.Variable;
-
-import android.annotation.TargetApi;
-import android.app.NotificationManager;
-import android.content.Context;
-import android.os.Build;
-import android.service.notification.StatusBarNotification;
-import android.util.Log;
 
 /**
  * This file is part of PocketMaps

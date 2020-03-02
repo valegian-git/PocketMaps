@@ -1,14 +1,14 @@
 package com.junjunguo.pocketmaps.geocoding;
 
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Properties;
-import java.util.Map.Entry;
+import android.location.Address;
+import android.util.Log;
 
 import com.junjunguo.pocketmaps.util.Variable;
 
-import android.location.Address;
-import android.util.Log;
+import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Map.Entry;
+import java.util.Properties;
 
 public class AddressLoc
 {

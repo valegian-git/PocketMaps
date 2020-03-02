@@ -4,14 +4,32 @@ import android.app.Activity;
 import android.graphics.Path;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import androidx.core.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+
+import androidx.core.content.ContextCompat;
+
+import com.graphhopper.GHRequest;
+import com.graphhopper.GHResponse;
+import com.graphhopper.GraphHopper;
+import com.graphhopper.PathWrapper;
+import com.graphhopper.android.GHAsyncTask;
+import com.graphhopper.routing.util.AllEdgesIterator;
+import com.graphhopper.util.Constants;
+import com.graphhopper.util.Parameters.Algorithms;
+import com.graphhopper.util.Parameters.Routing;
+import com.graphhopper.util.PointList;
+import com.graphhopper.util.StopWatch;
+import com.junjunguo.pocketmaps.R;
+import com.junjunguo.pocketmaps.activities.MapActivity;
+import com.junjunguo.pocketmaps.activities.ShowLocationActivity;
+import com.junjunguo.pocketmaps.model.listeners.MapHandlerListener;
+import com.junjunguo.pocketmaps.navigator.NaviEngine;
+import com.junjunguo.pocketmaps.util.TargetDirComputer;
+import com.junjunguo.pocketmaps.util.Variable;
+
 import org.oscim.android.MapView;
 import org.oscim.android.canvas.AndroidGraphics;
 import org.oscim.backend.canvas.Bitmap;
@@ -21,37 +39,21 @@ import org.oscim.event.Gesture;
 import org.oscim.event.GestureListener;
 import org.oscim.event.MotionEvent;
 import org.oscim.layers.Layer;
-import org.oscim.layers.vector.PathLayer;
 import org.oscim.layers.marker.ItemizedLayer;
 import org.oscim.layers.marker.MarkerItem;
 import org.oscim.layers.marker.MarkerSymbol;
 import org.oscim.layers.tile.buildings.BuildingLayer;
 import org.oscim.layers.tile.vector.VectorTileLayer;
 import org.oscim.layers.tile.vector.labeling.LabelLayer;
+import org.oscim.layers.vector.PathLayer;
 import org.oscim.layers.vector.geometries.Style;
 import org.oscim.map.Layers;
 import org.oscim.theme.VtmThemes;
 import org.oscim.tiling.source.mapfile.MapFileTileSource;
 
-import com.graphhopper.GHRequest;
-import com.graphhopper.GHResponse;
-import com.graphhopper.GraphHopper;
-import com.graphhopper.PathWrapper;
-import com.graphhopper.android.GHAsyncTask;
-import com.graphhopper.routing.util.AllEdgesIterator;
-import com.graphhopper.util.Constants;
-import com.graphhopper.util.StopWatch;
-import com.graphhopper.util.Parameters.Algorithms;
-import com.graphhopper.util.Parameters.Routing;
-import com.graphhopper.util.PointList;
-
-import com.junjunguo.pocketmaps.R;
-import com.junjunguo.pocketmaps.activities.MapActivity;
-import com.junjunguo.pocketmaps.activities.ShowLocationActivity;
-import com.junjunguo.pocketmaps.model.listeners.MapHandlerListener;
-import com.junjunguo.pocketmaps.navigator.NaviEngine;
-import com.junjunguo.pocketmaps.util.TargetDirComputer;
-import com.junjunguo.pocketmaps.util.Variable;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MapHandler

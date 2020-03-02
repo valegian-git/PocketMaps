@@ -3,9 +3,8 @@ package com.junjunguo.pocketmaps.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
-import androidx.appcompat.app.AlertDialog;
+import android.content.Intent;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,10 +19,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+
 import com.junjunguo.pocketmaps.R;
-import com.junjunguo.pocketmaps.activities.PocketMainActivity;
 import com.junjunguo.pocketmaps.activities.Analytics;
 import com.junjunguo.pocketmaps.activities.MapActivity;
+import com.junjunguo.pocketmaps.activities.PocketMainActivity;
 import com.junjunguo.pocketmaps.map.Tracking;
 import com.junjunguo.pocketmaps.util.UnitCalculator;
 import com.junjunguo.pocketmaps.util.Variable;

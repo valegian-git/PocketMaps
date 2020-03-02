@@ -7,19 +7,19 @@ import android.os.AsyncTask;
 import android.view.View;
 
 import com.jjoe64.graphview.series.DataPoint;
-import com.junjunguo.pocketmaps.fragments.AppSettings;
 import com.junjunguo.pocketmaps.db.DBtrackingPoints;
+import com.junjunguo.pocketmaps.fragments.AppSettings;
 import com.junjunguo.pocketmaps.model.listeners.TrackingListener;
 import com.junjunguo.pocketmaps.util.GenerateGPX;
 import com.junjunguo.pocketmaps.util.Variable;
+
+import org.oscim.core.GeoPoint;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.oscim.core.GeoPoint;
 
 /**
  * This file is part of PocketMaps

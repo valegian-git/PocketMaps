@@ -1,15 +1,5 @@
 package com.junjunguo.pocketmaps.util;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import com.junjunguo.pocketmaps.R;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -19,6 +9,16 @@ import android.content.DialogInterface.OnClickListener;
 import android.os.Build;
 import android.os.Environment;
 import android.widget.Toast;
+
+import com.junjunguo.pocketmaps.R;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class IO
 {

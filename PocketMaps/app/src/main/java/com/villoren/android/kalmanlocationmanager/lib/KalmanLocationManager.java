@@ -26,7 +26,6 @@ package com.villoren.android.kalmanlocationmanager.lib;
 
 import android.content.Context;
 import android.location.LocationListener;
-import android.location.Location;
 import android.util.Log;
 
 import java.util.HashMap;

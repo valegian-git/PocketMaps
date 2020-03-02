@@ -1,17 +1,17 @@
 package com.junjunguo.pocketmaps.navigator;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Set;
-
-import com.junjunguo.pocketmaps.util.Variable;
-
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.speech.tts.TextToSpeech;
-import android.speech.tts.Voice;
 import android.speech.tts.TextToSpeech.OnInitListener;
+import android.speech.tts.Voice;
+
+import com.junjunguo.pocketmaps.util.Variable;
+
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Set;
 
 public class NaviVoice
 {

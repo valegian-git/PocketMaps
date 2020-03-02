@@ -1,12 +1,12 @@
 package com.junjunguo.pocketmaps.geocoding;
 
-import java.util.ArrayList;
-import java.util.Locale;
+import android.location.Address;
 
 import com.junjunguo.pocketmaps.util.GeoMath;
 import com.junjunguo.pocketmaps.util.Variable;
 
-import android.location.Address;
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class StreetMatcher extends CityMatcher
 {

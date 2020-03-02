@@ -1,10 +1,5 @@
 package com.junjunguo.pocketmaps.util;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-
 import com.graphhopper.GHResponse;
 import com.graphhopper.PathWrapper;
 import com.graphhopper.util.Instruction;
@@ -12,9 +7,10 @@ import com.graphhopper.util.InstructionAnnotation;
 import com.graphhopper.util.InstructionList;
 import com.graphhopper.util.PointList;
 import com.graphhopper.util.Translation;
-import com.junjunguo.pocketmaps.map.Tracking;
 
-import android.util.Log;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 
 public class TargetDirComputer
 {

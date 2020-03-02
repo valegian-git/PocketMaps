@@ -1,7 +1,5 @@
 package com.junjunguo.pocketmaps.util;
 
-import com.junjunguo.pocketmaps.navigator.NaviEngine;
-
 import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -10,6 +8,8 @@ import android.hardware.SensorManager;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.junjunguo.pocketmaps.navigator.NaviEngine;
 
 public class LightSensor implements SensorEventListener
 {

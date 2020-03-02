@@ -1,19 +1,19 @@
 package com.junjunguo.pocketmaps.downloader;
 
-import java.io.File;
-import java.io.IOException;
-
-import com.junjunguo.pocketmaps.activities.DownloadMapActivity;
-import com.junjunguo.pocketmaps.model.MyMap;
-import com.junjunguo.pocketmaps.util.IO;
-import com.junjunguo.pocketmaps.util.Variable;
-
 import android.app.Activity;
 import android.app.DownloadManager;
 import android.app.DownloadManager.Query;
 import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
+
+import com.junjunguo.pocketmaps.activities.DownloadMapActivity;
+import com.junjunguo.pocketmaps.model.MyMap;
+import com.junjunguo.pocketmaps.util.IO;
+import com.junjunguo.pocketmaps.util.Variable;
+
+import java.io.File;
+import java.io.IOException;
 
 public class MapDownloadUnzip
 {

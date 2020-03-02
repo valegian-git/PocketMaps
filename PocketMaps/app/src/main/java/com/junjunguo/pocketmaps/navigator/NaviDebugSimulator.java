@@ -1,18 +1,18 @@
 package com.junjunguo.pocketmaps.navigator;
 
-import java.util.ArrayList;
-
-import org.oscim.core.GeoPoint;
+import android.app.Activity;
+import android.location.Location;
+import android.os.Handler;
+import android.util.Log;
 
 import com.graphhopper.util.Instruction;
 import com.graphhopper.util.InstructionList;
 import com.junjunguo.pocketmaps.activities.MapActivity;
 import com.junjunguo.pocketmaps.map.Tracking;
 
-import android.app.Activity;
-import android.location.Location;
-import android.os.Handler;
-import android.util.Log;
+import org.oscim.core.GeoPoint;
+
+import java.util.ArrayList;
 
 public class NaviDebugSimulator
 {

@@ -1,5 +1,7 @@
 package com.junjunguo.pocketmaps.map;
 
+import android.app.Activity;
+
 import com.graphhopper.PathWrapper;
 import com.graphhopper.util.Helper;
 import com.graphhopper.util.Instruction;
@@ -8,8 +10,6 @@ import com.junjunguo.pocketmaps.model.listeners.NavigatorListener;
 import com.junjunguo.pocketmaps.navigator.NaviEngine;
 import com.junjunguo.pocketmaps.util.UnitCalculator;
 import com.junjunguo.pocketmaps.util.Variable;
-
-import android.app.Activity;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -20,18 +20,16 @@ import com.junjunguo.pocketmaps.map.Destination;
 import com.junjunguo.pocketmaps.map.MapHandler;
 import com.junjunguo.pocketmaps.map.Navigator;
 import com.junjunguo.pocketmaps.map.Tracking;
+import com.junjunguo.pocketmaps.navigator.NaviEngine;
 import com.junjunguo.pocketmaps.util.SetStatusBarColor;
 import com.junjunguo.pocketmaps.util.Variable;
-import com.junjunguo.pocketmaps.navigator.NaviEngine;
-
 import com.villoren.android.kalmanlocationmanager.lib.KalmanLocationManager;
-
-import java.io.File;
+import com.villoren.android.kalmanlocationmanager.lib.KalmanLocationManager.UseProvider;
 
 import org.oscim.android.MapView;
 import org.oscim.core.GeoPoint;
 
-import com.villoren.android.kalmanlocationmanager.lib.KalmanLocationManager.UseProvider;
+import java.io.File;
 
 /**
  * This file is part of PocketMaps

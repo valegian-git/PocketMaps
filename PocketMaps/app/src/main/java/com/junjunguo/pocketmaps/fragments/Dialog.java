@@ -1,17 +1,17 @@
 package com.junjunguo.pocketmaps.fragments;
 
-import com.junjunguo.pocketmaps.R;
-import com.junjunguo.pocketmaps.util.Variable;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.provider.Settings;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.junjunguo.pocketmaps.R;
+import com.junjunguo.pocketmaps.util.Variable;
 
 public class Dialog
 {

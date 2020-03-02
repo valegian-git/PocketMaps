@@ -1,17 +1,17 @@
 package com.junjunguo.pocketmaps.geocoding;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
-
-import org.osmdroid.location.GeocoderNominatim;
-
-import com.junjunguo.pocketmaps.model.listeners.OnProgressListener;
-
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
 import android.util.Log;
+
+import com.junjunguo.pocketmaps.model.listeners.OnProgressListener;
+
+import org.osmdroid.location.GeocoderNominatim;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class GeocoderGlobal
 {

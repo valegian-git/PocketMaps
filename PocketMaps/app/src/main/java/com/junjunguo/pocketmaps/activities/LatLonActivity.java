@@ -1,45 +1,20 @@
 package com.junjunguo.pocketmaps.activities;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map.Entry;
-import java.util.Properties;
-
-import org.oscim.core.GeoPoint;
-
-import com.junjunguo.pocketmaps.R;
-import com.junjunguo.pocketmaps.fragments.MessageDialog;
-import com.junjunguo.pocketmaps.fragments.MyAddressAdapter;
-import com.junjunguo.pocketmaps.geocoding.AddressLoc;
-import com.junjunguo.pocketmaps.geocoding.GeocoderGlobal;
-import com.junjunguo.pocketmaps.model.listeners.OnClickAddressListener;
-import com.junjunguo.pocketmaps.util.Variable;
-
-import android.content.Context;
 import android.location.Address;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.junjunguo.pocketmaps.R;
+import com.junjunguo.pocketmaps.model.listeners.OnClickAddressListener;
+
+import java.util.Locale;
 
 public class LatLonActivity  extends AppCompatActivity implements OnClickListener
 {

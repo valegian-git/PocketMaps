@@ -1,14 +1,14 @@
 package com.junjunguo.pocketmaps.model;
 
-import com.junjunguo.pocketmaps.activities.DownloadMapActivity;
-import com.junjunguo.pocketmaps.model.listeners.OnProgressListener;
-import com.junjunguo.pocketmaps.util.IO;
-import com.junjunguo.pocketmaps.util.Variable;
-
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.junjunguo.pocketmaps.activities.DownloadMapActivity;
+import com.junjunguo.pocketmaps.model.listeners.OnProgressListener;
+import com.junjunguo.pocketmaps.util.IO;
+import com.junjunguo.pocketmaps.util.Variable;
 
 import java.io.File;
 import java.util.List;

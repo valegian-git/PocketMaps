@@ -1,7 +1,5 @@
 package com.junjunguo.pocketmaps.downloader;
 
-import com.junjunguo.pocketmaps.activities.PocketMainActivity;
-
 import android.R;
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -11,6 +9,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+
+import com.junjunguo.pocketmaps.activities.PocketMainActivity;
 
 public class ProgressPublisher
 {

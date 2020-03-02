@@ -2,26 +2,27 @@ package com.junjunguo.pocketmaps.activities;
 
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.LegendRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.junjunguo.pocketmaps.R;
+import com.junjunguo.pocketmaps.fragments.SpinnerAdapter;
+import com.junjunguo.pocketmaps.map.Tracking;
 import com.junjunguo.pocketmaps.model.SportCategory;
 import com.junjunguo.pocketmaps.model.listeners.TrackingListener;
-import com.junjunguo.pocketmaps.map.Tracking;
 import com.junjunguo.pocketmaps.util.Calorie;
 import com.junjunguo.pocketmaps.util.SetStatusBarColor;
 import com.junjunguo.pocketmaps.util.UnitCalculator;
-import com.junjunguo.pocketmaps.fragments.SpinnerAdapter;
 import com.junjunguo.pocketmaps.util.Variable;
 
 import java.util.ArrayList;

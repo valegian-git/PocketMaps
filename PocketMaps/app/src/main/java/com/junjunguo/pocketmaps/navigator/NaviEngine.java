@@ -1,6 +1,14 @@
 package com.junjunguo.pocketmaps.navigator;
 
-import org.oscim.core.GeoPoint;
+import android.app.Activity;
+import android.location.Location;
+import android.os.AsyncTask.Status;
+import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.UiThread;
+import androidx.annotation.WorkerThread;
 
 import com.graphhopper.android.GHAsyncTask;
 import com.graphhopper.routing.util.EdgeFilter;
@@ -15,14 +23,7 @@ import com.junjunguo.pocketmaps.util.GeoMath;
 import com.junjunguo.pocketmaps.util.LightSensor;
 import com.junjunguo.pocketmaps.util.UnitCalculator;
 
-import android.app.Activity;
-import androidx.annotation.WorkerThread;
-import androidx.annotation.UiThread;
-import android.location.Location;
-import android.os.AsyncTask.Status;
-import android.util.Log;
-import android.widget.ImageView;
-import android.widget.TextView;
+import org.oscim.core.GeoPoint;
 
 public class NaviEngine
 {

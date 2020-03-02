@@ -1,12 +1,8 @@
 package com.junjunguo.pocketmaps.geocoding;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
+import android.content.Context;
+import android.location.Address;
+import android.util.Log;
 
 import com.graphhopper.routing.util.AllEdgesIterator;
 import com.junjunguo.pocketmaps.map.MapHandler;
@@ -14,9 +10,13 @@ import com.junjunguo.pocketmaps.model.listeners.OnProgressListener;
 import com.junjunguo.pocketmaps.util.GeoMath;
 import com.junjunguo.pocketmaps.util.Variable;
 
-import android.content.Context;
-import android.location.Address;
-import android.util.Log;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class GeocoderLocal
 {

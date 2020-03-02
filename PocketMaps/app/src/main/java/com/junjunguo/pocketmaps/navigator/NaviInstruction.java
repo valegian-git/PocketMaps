@@ -1,10 +1,10 @@
 package com.junjunguo.pocketmaps.navigator;
 
 import com.graphhopper.util.Instruction;
+import com.junjunguo.pocketmaps.R;
 import com.junjunguo.pocketmaps.map.Navigator;
 import com.junjunguo.pocketmaps.util.UnitCalculator;
 import com.junjunguo.pocketmaps.util.Variable;
-import com.junjunguo.pocketmaps.R;
 
 public class NaviInstruction
 {
