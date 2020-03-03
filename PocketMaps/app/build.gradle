@@ -21,7 +21,7 @@ android {
     }
 
     lintOptions {
-        disable 'InvalidPackage','MissingPrefix'
+        disable 'InvalidPackage', 'MissingPrefix'
     }
 }
 
@@ -33,9 +33,9 @@ dependencies {
     implementation 'com.jjoe64:graphview:4.2.2'
 
     implementation(group: 'com.graphhopper', name: 'graphhopper-core', version: '0.13.0') {
-       exclude group: 'com.google.protobuf', module: 'protobuf-java'
-       exclude group: 'org.openstreetmap.osmosis', module: 'osmosis-osm-binary'
-       exclude group: 'org.apache.xmlgraphics', module: 'xmlgraphics-commons'
+        exclude group: 'com.google.protobuf', module: 'protobuf-java'
+        exclude group: 'org.openstreetmap.osmosis', module: 'osmosis-osm-binary'
+        exclude group: 'org.apache.xmlgraphics', module: 'xmlgraphics-commons'
     }
 
     implementation 'org.mapsforge:vtm:0.12.0'
@@ -54,4 +54,7 @@ dependencies {
     implementation 'org.slf4j:slf4j-android:1.7.28'
     implementation 'com.squareup.okhttp3:okhttp:4.2.2'
     implementation 'org.conscrypt:conscrypt-android:2.2.1'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 }
