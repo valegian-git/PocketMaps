@@ -28,6 +28,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.junjunguo.pocketmaps.R;
+import com.junjunguo.pocketmaps.activities.ui.login.LoginActivity;
 import com.junjunguo.pocketmaps.downloader.MapDownloadUnzip;
 import com.junjunguo.pocketmaps.downloader.MapDownloadUnzip.StatusUpdate;
 import com.junjunguo.pocketmaps.fragments.Dialog;
@@ -56,9 +57,10 @@ import java.util.List;
  * <p/>This file is part of PocketMaps
  * <br/>Created by GuoJunjun <junjunguo.com> on July 04, 2015.
  */
-public class PocketMainActivity extends AppCompatActivity implements OnClickMapListener {
+public class MainActivity extends AppCompatActivity implements OnClickMapListener {
     public final static int ITEM_TOUCH_HELPER_LEFT = 4;
     public final static int ITEM_TOUCH_HELPER_RIGHT = 8;
+    public static final int LOGIN_REQUEST = 1;
     private MyMapAdapter mapAdapter;
     private boolean changeMap;
     private RecyclerView mapsRV;
@@ -67,7 +69,14 @@ public class PocketMainActivity extends AppCompatActivity implements OnClickMapL
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        continueActivity();
+        //continueActivity(); Moved to onActivityResult
+        startLoginActivity();
+    }
+
+    private void startLoginActivity(){
+        Intent login = new Intent(this, LoginActivity.class); //Plan on replacing this activity
+        // Hold application until user is finished with login
+        startActivityForResult(login, LOGIN_REQUEST);
     }
     
     private PhoneStateListener createCallListener()
@@ -127,7 +136,11 @@ public class PocketMainActivity extends AppCompatActivity implements OnClickMapL
         {
           Variable.getVariable().loadVariables(Variable.VarType.Geocode);
         }
-        
+
+        /**
+         * Possibly go to login here?
+         */
+
         activateAddBtn();
         activateRecyclerView(new ArrayList<MyMap>());
         generateList();
@@ -475,19 +488,6 @@ public class PocketMainActivity extends AppCompatActivity implements OnClickMapL
       IO.writeToFile(dataFavourites, newFavourites, false);
     }
 
-    @Override protected void onResume() {
-        super.onResume();
-        if (continueActivity())
-        {
-          addRecentDownloadedFiles();
-          checkMissingMaps();
-          if (mapAdapter!=null && mapAdapter.getItemCount()>0)
-          {
-            MessageDialog.showMsg(this, "mapDeleteMsg", R.string.swipe_out, true);
-          }
-        }
-    }
-
     private void checkMissingMaps()
     {
       boolean hasUnfinishedMaps = false;
@@ -528,13 +528,13 @@ public class PocketMainActivity extends AppCompatActivity implements OnClickMapL
         @Override
         public void logUserThread(String txt)
         {
-          PocketMainActivity.this.logUserThread(txt);
+          MainActivity.this.logUserThread(txt);
         }
 
         @Override
         public void updateMapStatus(MyMap map)
         {
-          PocketMainActivity.this.logUserThread(map.getMapName() + ": " + map.getStatus());
+          MainActivity.this.logUserThread(map.getMapName() + ": " + map.getStatus());
           if (map.getStatus() == DlStatus.Complete)
           {
             mapAdapter.insert(map);
@@ -548,8 +548,29 @@ public class PocketMainActivity extends AppCompatActivity implements OnClickMapL
       };
     }
 
+    @Override protected void onResume() {
+        super.onResume();
+        if (continueActivity())
+        {
+            addRecentDownloadedFiles();
+            checkMissingMaps();
+            if (mapAdapter!=null && mapAdapter.getItemCount()>0)
+            {
+                MessageDialog.showMsg(this, "mapDeleteMsg", R.string.swipe_out, true);
+            }
+        }
+    }
+
     @Override protected void onPause() {
         super.onPause();
+    }
+
+    @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == LOGIN_REQUEST) {
+            // Resume application
+            continueActivity();
+        }
     }
 
     /**
@@ -585,11 +606,11 @@ public class PocketMainActivity extends AppCompatActivity implements OnClickMapL
      * @param str
      */
     private static void log(String str) {
-        Log.i(PocketMainActivity.class.getName(), str);
+        Log.i(MainActivity.class.getName(), str);
     }
 
     private void logUser(String str) {
-      Log.i(PocketMainActivity.class.getName(), str);
+      Log.i(MainActivity.class.getName(), str);
       try
       {
         Toast.makeText(getBaseContext(), str, Toast.LENGTH_SHORT).show();

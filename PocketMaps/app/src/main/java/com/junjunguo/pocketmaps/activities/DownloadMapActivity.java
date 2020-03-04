@@ -407,7 +407,7 @@ public class DownloadMapActivity extends AppCompatActivity
           myDownloadAdapter.remove(removePos);
           if (position > removePos) { position--; }
         }
-        PocketMainActivity.clearLocalMap(myMap);
+        MainActivity.clearLocalMap(myMap);
         if (myMapNew != null)
         {
           myMap = myMapNew;

@@ -1,4 +1,4 @@
-package com.ridealong.android.ui.login;
+package com.junjunguo.pocketmaps.activities.ui.login;
 
 /**
  * Class exposing authenticated user details to the UI.

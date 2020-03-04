@@ -125,7 +125,7 @@ public class ShowLocationActivity  extends AppCompatActivity
   
   private void showMain()
   {
-    Intent intent = new Intent(this, PocketMainActivity.class);
+    Intent intent = new Intent(this, MainActivity.class);
     intent.putExtra("com.junjunguo.pocketmaps.activities.MapActivity.SELECTNEWMAP", false);
     startActivity(intent);
     finish();

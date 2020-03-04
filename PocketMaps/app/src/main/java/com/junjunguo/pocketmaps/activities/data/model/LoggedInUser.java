@@ -1,4 +1,4 @@
-package com.ridealong.android.data.model;
+package com.junjunguo.pocketmaps.activities.data.model;
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

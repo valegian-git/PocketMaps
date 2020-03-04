@@ -1,6 +1,6 @@
-package com.ridealong.android.data;
+package com.junjunguo.pocketmaps.activities.data;
 
-import com.ridealong.android.data.model.LoggedInUser;
+import com.junjunguo.pocketmaps.activities.data.model.LoggedInUser;
 
 import java.io.IOException;
 

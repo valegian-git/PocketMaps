@@ -10,7 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
-import com.junjunguo.pocketmaps.activities.PocketMainActivity;
+import com.junjunguo.pocketmaps.activities.MainActivity;
 
 public class ProgressPublisher
 {
@@ -60,7 +60,7 @@ public class ProgressPublisher
   private void updateNotification(String title, String text, boolean ongoing)
   {
     PendingIntent contentIntent = PendingIntent.getActivity(c, 0,
-                    new Intent(c, PocketMainActivity.class),   PendingIntent.FLAG_UPDATE_CURRENT);
+                    new Intent(c, MainActivity.class),   PendingIntent.FLAG_UPDATE_CURRENT);
     NotificationManager nMgr = (NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
     Notification.Builder mBuilder = createNotification(c, nMgr).setSmallIcon(R.drawable.ic_dialog_info)
                     .setContentTitle(title).setContentText(text).setContentIntent(contentIntent).setOngoing(ongoing);

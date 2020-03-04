@@ -24,7 +24,7 @@ import androidx.appcompat.app.AlertDialog;
 import com.junjunguo.pocketmaps.R;
 import com.junjunguo.pocketmaps.activities.Analytics;
 import com.junjunguo.pocketmaps.activities.MapActivity;
-import com.junjunguo.pocketmaps.activities.PocketMainActivity;
+import com.junjunguo.pocketmaps.activities.MainActivity;
 import com.junjunguo.pocketmaps.map.Tracking;
 import com.junjunguo.pocketmaps.util.UnitCalculator;
 import com.junjunguo.pocketmaps.util.Variable;
@@ -397,7 +397,7 @@ public class AppSettings {
         //        if (Tracking.getTracking().isTracking()) {
         //            Toast.makeText(activity, "You need to stop your tracking first!", Toast.LENGTH_LONG).show();
         //        } else {
-        Intent intent = new Intent(activity, PocketMainActivity.class);
+        Intent intent = new Intent(activity, MainActivity.class);
         intent.putExtra("com.junjunguo.pocketmaps.activities.MapActivity.SELECTNEWMAP", true);
         activity.startActivity(intent);
         //        activity.finish();

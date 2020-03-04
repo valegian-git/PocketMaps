@@ -1,4 +1,4 @@
-package com.ridealong.android.ui.login;
+package com.junjunguo.pocketmaps.activities.ui.login;
 
 import android.app.Activity;
 
@@ -23,8 +23,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.junjunguo.pocketmaps.R;
-import com.ridealong.android.ui.login.LoginViewModel;
-import com.ridealong.android.ui.login.LoginViewModelFactory;
+import com.junjunguo.pocketmaps.activities.ui.login.LoginViewModel;
+import com.junjunguo.pocketmaps.activities.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 

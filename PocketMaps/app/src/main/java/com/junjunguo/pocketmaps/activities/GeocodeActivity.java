@@ -141,7 +141,7 @@ public class GeocodeActivity  extends AppCompatActivity implements OnClickListen
         }
       }
     };
-    PocketMainActivity.addDeleteItemHandler(this, recView, delL);
+    MainActivity.addDeleteItemHandler(this, recView, delL);
   }
 
   private void showSearchEngine()

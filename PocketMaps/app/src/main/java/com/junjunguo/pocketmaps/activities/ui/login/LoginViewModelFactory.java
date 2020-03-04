@@ -1,11 +1,11 @@
-package com.ridealong.android.ui.login;
+package com.junjunguo.pocketmaps.activities.ui.login;
 
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.annotation.NonNull;
 
-import com.ridealong.android.data.LoginDataSource;
-import com.ridealong.android.data.LoginRepository;
+import com.junjunguo.pocketmaps.activities.data.LoginDataSource;
+import com.junjunguo.pocketmaps.activities.data.LoginRepository;
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

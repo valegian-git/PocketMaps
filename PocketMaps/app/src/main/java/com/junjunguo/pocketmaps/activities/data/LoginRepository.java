@@ -1,6 +1,6 @@
-package com.ridealong.android.data;
+package com.junjunguo.pocketmaps.activities.data;
 
-import com.ridealong.android.data.model.LoggedInUser;
+import com.junjunguo.pocketmaps.activities.data.model.LoggedInUser;
 
 /**
  * Class that requests authentication and user information from the remote data source and

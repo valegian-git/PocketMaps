@@ -1,4 +1,4 @@
-package com.ridealong.android.data;
+package com.junjunguo.pocketmaps.activities.data;
 
 /**
  * A generic class that holds a result success w/ data or an error exception.

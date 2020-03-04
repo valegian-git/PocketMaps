@@ -1,4 +1,4 @@
-package com.ridealong.android.ui.login;
+package com.junjunguo.pocketmaps.activities.ui.login;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -6,9 +6,9 @@ import androidx.lifecycle.ViewModel;
 
 import android.util.Patterns;
 
-import com.ridealong.android.data.LoginRepository;
-import com.ridealong.android.data.Result;
-import com.ridealong.android.data.model.LoggedInUser;
+import com.junjunguo.pocketmaps.activities.data.LoginRepository;
+import com.junjunguo.pocketmaps.activities.data.Result;
+import com.junjunguo.pocketmaps.activities.data.model.LoggedInUser;
 import com.junjunguo.pocketmaps.R;
 
 public class LoginViewModel extends ViewModel {
