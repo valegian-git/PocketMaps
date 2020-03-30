@@ -45,6 +45,8 @@ import com.junjunguo.pocketmaps.util.SetStatusBarColor;
 import com.junjunguo.pocketmaps.util.Variable;
 import com.junjunguo.pocketmaps.util.Variable.VarType;
 
+import com.junjunguo.pocketmaps.db.FBauth;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
@@ -74,9 +76,15 @@ public class MainActivity extends AppCompatActivity implements OnClickMapListene
     }
 
     private void startLoginActivity(){
+
         Intent login = new Intent(this, LoginActivity.class); //Plan on replacing this activity
-        // Hold application until user is finished with login
+        //Hold application until user is finished with login
         startActivityForResult(login, LOGIN_REQUEST);
+
+
+        //Hardcoded account create
+        //FBauth.initialiseFBauth();
+        //FBauth.createAccount();
     }
     
     private PhoneStateListener createCallListener()
