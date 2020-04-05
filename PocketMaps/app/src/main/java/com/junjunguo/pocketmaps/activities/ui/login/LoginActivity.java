@@ -231,11 +231,19 @@ public class LoginActivity extends AppCompatActivity {
         if(requestCode == REGISTER_REQUEST) {
             // Resume application
             if(mAuth.getCurrentUser() != null){
-                finish(); //user is logged in, resume application
+                //REMOVED TEMPORARILY BECAUSE WAS CAUSING BUG
+                //finish(); //user is logged in, resume application
             }
             else {
                 // do nothing
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        // super.onBackPressed();
+        // Do nothing
+        return;
     }
 }
