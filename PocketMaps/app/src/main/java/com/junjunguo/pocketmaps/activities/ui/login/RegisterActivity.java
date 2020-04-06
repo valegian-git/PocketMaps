@@ -66,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
+        /**loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
             public void onChanged(@Nullable LoginResult loginResult) {
                 if (loginResult == null) {
@@ -84,7 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
                 //Complete and destroy login activity once successful
                 finish();
             }
-        });
+        });**/
 
         TextWatcher afterTextChangedListener = new TextWatcher() {
             @Override
