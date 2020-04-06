@@ -23,15 +23,22 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.junjunguo.pocketmaps.R;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private static final String TAG = "";
+    private static final String TAG = "REGISTER_LOG";
     private LoginViewModel loginViewModel;
     private FirebaseAuth mAuth;
 
@@ -121,7 +128,12 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
-                createAccount(emailEditText.getText().toString(), passwordEditText.getText().toString());
+                if(!emailEditText.getText().equals(emailConfirmationEditText.getText()) || !passwordEditText.getText().equals(passwordConfirmationEditText.getText())){
+                    Log.d(TAG, "registerButton.setOnClickListener:non-matching data");
+                    Toast.makeText(RegisterActivity.this, "Email or password combination not matching.",
+                            Toast.LENGTH_SHORT).show();
+                }
+                createAccount(emailEditText.getText().toString(), passwordEditText.getText().toString(), usernameEditText.getText().toString());
             }
         });
 
@@ -131,7 +143,7 @@ public class RegisterActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
     }
 
-    private void createAccount(String email, String password){
+    private void createAccount(final String email, final String password, final String username){
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -142,8 +154,32 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "Successfully registered.",
                                     Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
+                            
+                            FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-                            //TODO Add username, etc.. to database
+                            // Create a new user with a first and last name
+                            Map<String, Object> userData = new HashMap<>();
+                            userData.put("username", username);
+                            userData.put("avatar", 1111);
+
+                            // Add a new document with a generated ID
+                            db.collection("Users_profile").document(user.getUid())
+                                    .set(userData)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void aVoid) {
+                                            Log.d(TAG, "DocumentSnapshot successfully written!");
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Log.w(TAG, "Error writing document", e);
+                                            Toast.makeText(RegisterActivity.this, "FAIL FAIL FAIL.",
+                                                    Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+
 
                             finish();
                         } else {
