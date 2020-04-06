@@ -228,6 +228,8 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        loadingProgressBar.setVisibility(View.GONE);
         if(requestCode == REGISTER_REQUEST) {
             // Resume application
             if(mAuth.getCurrentUser() != null){
