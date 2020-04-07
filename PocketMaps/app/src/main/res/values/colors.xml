@@ -28,4 +28,12 @@
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+
+    <!-- RideAlong colours -->
+    <color name="ridealong_blue">#6064C9</color>
+    <color name="ridealong_red">#FC2C2C</color>
+    <color name="ridealong_grey">#E1E1EA</color>
+    <color name="ridealong_green">#089F0D</color>
+    <color name="ridealong_yellow">#FFCC00</color>
+
 </resources>

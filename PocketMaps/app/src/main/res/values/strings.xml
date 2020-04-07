@@ -77,8 +77,11 @@
     <string name="search_hint">Enter text</string>
     <string name="edit">Edit</string>
     <string name="help">Help</string>
+
+    <!-- RideAlong strings -->
     <string name="title_activity_login">Login</string>
     <string name="title_activity_register">Register</string>
+    <string name="title_activity_group_create">Group Create</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_email_confirmation">Email Confirmation</string>
     <string name="prompt_password">Password</string>
@@ -91,4 +94,15 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="create_group">Create Group</string>
+    <string name="group_id">Group ID</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- RideAlong text -->
+    <string name="group_create_tooltip">
+        Share the group code above to let
+        your friends join this group. Once
+        you are finished adding friends or
+        have saved the code, press the ‘Done’ button below.
+    </string>
 </resources>

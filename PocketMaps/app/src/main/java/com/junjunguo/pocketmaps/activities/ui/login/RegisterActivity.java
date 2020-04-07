@@ -154,7 +154,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "Successfully registered.",
                                     Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
-                            
+
                             FirebaseFirestore db = FirebaseFirestore.getInstance();
 
                             // Create a new user with a first and last name
