@@ -33,7 +33,7 @@
                 android:layout_marginTop="@dimen/fab_margin_default"
                 android:layout_marginRight="@dimen/fab_margin_default"
                 android:layout_marginBottom="@dimen/fab_margin_default"
-                android:src="@drawable/ic_navigation_white_24dp"
+                android:src="@drawable/ic_group_join_white_24dp"
                 app:fabSize="mini" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -44,7 +44,7 @@
                 android:layout_marginTop="@dimen/fab_margin_default"
                 android:layout_marginRight="@dimen/fab_margin_default"
                 android:layout_marginBottom="@dimen/fab_margin_default"
-                android:src="@drawable/ic_settings_white_24dp"
+                android:src="@drawable/ic_group_create_white_24dp"
                 app:fabSize="mini" />
 
         </LinearLayout>
