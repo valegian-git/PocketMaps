@@ -96,11 +96,14 @@
     <string name="login_failed">"Login failed"</string>
     <string name="create_group">Create Group</string>
     <string name="group_id">Group ID</string>
-    <string name="cancel">Cancel</string>
+    <string name="cancel_2">Cancel</string>
 
     <!-- RideAlong text -->
     <string name="group_create_tooltip">
-        Share the group code above to let
+        Select \'Create Group\' button below
+        to create a new group.
+        \n\n
+        Then, share the group code above to let
         your friends join this group. Once
         you are finished adding friends or
         have saved the code, press the ‘Done’ button below.

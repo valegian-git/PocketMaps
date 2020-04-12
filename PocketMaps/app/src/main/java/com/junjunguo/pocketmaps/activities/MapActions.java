@@ -61,9 +61,9 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
     private TabAction tabAction = TabAction.None;
     private Activity activity;
     private AppSettings appSettings;
-    protected FloatingActionButton showPositionBtn, navigationBtn, settingsBtn, settingsSetBtn, settingsNavBtn, controlBtn, favourBtn;
+    protected FloatingActionButton showPositionBtn, navigationBtn, settingsBtn, settingsSetBtn, settingsNavBtn, controlBtn, favourBtn, groupBtn, groupCreateBtn, groupJoinBtn;
     protected FloatingActionButton zoomInBtn, zoomOutBtn;
-    private ViewGroup sideBarVP, sideBarMenuVP, southBarSettVP, southBarFavourVP, navSettingsVP, navSettingsFromVP, navSettingsToVP,
+    private ViewGroup sideBarVP, sideBarMenuVP, southBarSettVP, southBarFavourVP, southBarGroupVP ,navSettingsVP, navSettingsFromVP, navSettingsToVP,
             navInstructionListVP, navTopVP;
     private boolean menuVisible;
     private TextView fromLocalET, toLocalET;
@@ -77,6 +77,9 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
         this.settingsNavBtn = (FloatingActionButton) activity.findViewById(R.id.map_southbar_sett_nav_fab);
         this.favourBtn = (FloatingActionButton) activity.findViewById(R.id.map_southbar_favour_fab);
         this.controlBtn = (FloatingActionButton) activity.findViewById(R.id.map_sidebar_control_fab);
+        this.groupBtn = (FloatingActionButton) activity.findViewById(R.id.map_southbar_group_fab);
+        this.groupCreateBtn = (FloatingActionButton) activity.findViewById(R.id.map_southbar_group_create_fab);
+        this.groupJoinBtn = (FloatingActionButton) activity.findViewById(R.id.map_southbar_group_join_fab);
         this.zoomInBtn = (FloatingActionButton) activity.findViewById(R.id.map_zoom_in_fab);
         this.zoomOutBtn = (FloatingActionButton) activity.findViewById(R.id.map_zoom_out_fab);
         // view groups managed by separate layout xml file : //map_sidebar_layout/map_sidebar_menu_layout
@@ -84,6 +87,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
         this.sideBarMenuVP = (ViewGroup) activity.findViewById(R.id.map_sidebar_menu_layout);
         this.southBarSettVP = (ViewGroup) activity.findViewById(R.id.map_southbar_sett_layout);
         this.southBarFavourVP = (ViewGroup) activity.findViewById(R.id.map_southbar_favour_layout);
+        this.southBarGroupVP = (ViewGroup) activity.findViewById(R.id.map_southbar_group_layout);
         this.navSettingsVP = (ViewGroup) activity.findViewById(R.id.nav_settings_layout);
         this.navTopVP = (ViewGroup) activity.findViewById(R.id.navtop_layout);
         this.navSettingsFromVP = (ViewGroup) activity.findViewById(R.id.nav_settings_from_layout);
@@ -103,6 +107,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
         initNavSettingsHandler();
         initSettingsBtnHandler();
         initFavourBtnHandler();
+        initGroupBtnHandler();
         mapView.map().getEventLayer().enableRotation(false);
     }
 
@@ -129,6 +134,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
                 settingsBtn.setBackgroundTintList(oriColor);
                 southBarSettVP.setVisibility(View.INVISIBLE);
                 favourBtn.setVisibility(View.VISIBLE);
+                groupBtn.setVisibility(View.VISIBLE);
                 sideBarMenuVP.setVisibility(View.VISIBLE);
                 controlBtn.setVisibility(View.VISIBLE);
               }
@@ -138,6 +144,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
                 settingsBtn.setBackgroundTintList(ColorStateList.valueOf(R.color.abc_color_highlight_material));
                 southBarSettVP.setVisibility(View.VISIBLE);
                 favourBtn.setVisibility(View.INVISIBLE);
+                groupBtn.setVisibility(View.INVISIBLE);
                 sideBarMenuVP.setVisibility(View.INVISIBLE);
                 controlBtn.clearAnimation();
                 controlBtn.setVisibility(View.INVISIBLE);
@@ -161,6 +168,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
                 favourBtn.setBackgroundTintList(oriColor);
                 southBarFavourVP.setVisibility(View.INVISIBLE);
                 settingsBtn.setVisibility(View.VISIBLE);
+                groupBtn.setVisibility(View.VISIBLE);
                 sideBarMenuVP.setVisibility(View.VISIBLE);
                 controlBtn.setVisibility(View.VISIBLE);
               }
@@ -170,6 +178,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
                 favourBtn.setBackgroundTintList(ColorStateList.valueOf(R.color.abc_color_highlight_material));
                 southBarFavourVP.setVisibility(View.VISIBLE);
                 settingsBtn.setVisibility(View.INVISIBLE);
+                groupBtn.setVisibility(View.INVISIBLE);
                 sideBarMenuVP.setVisibility(View.INVISIBLE);
                 controlBtn.clearAnimation();
                 controlBtn.setVisibility(View.INVISIBLE);
@@ -177,7 +186,51 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
             }
         });
     }
-    
+
+    /**
+     * init and implement performance for group
+     */
+    private void initGroupBtnHandler() {
+        groupJoinBtn.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                appSettings.showAppSettings(sideBarVP, SettType.Default);
+            }
+        });
+
+        groupCreateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                appSettings.showAppSettings(sideBarVP, SettType.Default);
+            }
+        });
+
+        groupBtn.setOnClickListener(new View.OnClickListener() {
+            ColorStateList oriColor;
+            @Override
+            public void onClick(View v) {
+                if (southBarGroupVP.getVisibility() == View.VISIBLE)
+                {
+                    groupBtn.setBackgroundTintList(oriColor);
+                    southBarGroupVP.setVisibility(View.INVISIBLE);
+                    settingsBtn.setVisibility(View.VISIBLE);
+                    favourBtn.setVisibility(View.VISIBLE);
+                    sideBarMenuVP.setVisibility(View.VISIBLE);
+                    controlBtn.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    oriColor = settingsBtn.getBackgroundTintList();
+                    groupBtn.setBackgroundTintList(ColorStateList.valueOf(R.color.abc_color_highlight_material));
+                    southBarGroupVP.setVisibility(View.VISIBLE);
+                    favourBtn.setVisibility(View.INVISIBLE);
+                    settingsBtn.setVisibility(View.INVISIBLE);
+                    sideBarMenuVP.setVisibility(View.INVISIBLE);
+                    controlBtn.clearAnimation();
+                    controlBtn.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+    }
+
     /**
      * navigation settings implementation
      * <p>
@@ -854,6 +907,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
                     sideBarMenuVP.setVisibility(View.INVISIBLE);
                     favourBtn.setVisibility(View.INVISIBLE);
                     settingsBtn.setVisibility(View.INVISIBLE);
+                    groupBtn.setVisibility(View.INVISIBLE);
                     controlBtn.setImageResource(R.drawable.ic_keyboard_arrow_up_white_24dp);
                     controlBtn.startAnimation(anim);
                 } else {
@@ -861,6 +915,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
                     sideBarMenuVP.setVisibility(View.VISIBLE);
                     favourBtn.setVisibility(View.VISIBLE);
                     settingsBtn.setVisibility(View.VISIBLE);
+                    groupBtn.setVisibility(View.VISIBLE);
                     controlBtn.setImageResource(R.drawable.ic_keyboard_arrow_down_white_24dp);
                     controlBtn.startAnimation(anim);
                 }
