@@ -107,9 +107,6 @@
         <activity
             android:name=".activities.ui.login.RegisterActivity"
             android:label="@string/title_activity_register" />
-        <activity
-            android:name=".activities.GroupCreateActivity"
-            android:label="@string/title_activity_group_create"/>
     </application>
 
 </manifest>

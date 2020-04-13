@@ -23,4 +23,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
 
+    <dimen name="ridealong_title_size">24sp</dimen>
+    <dimen name="ridealong_text_size">18sp</dimen>
+
 </resources>

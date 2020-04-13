@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_create_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/gp_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/create_group"
+            android:textColor="#000000"
+            android:textSize="@dimen/ridealong_title_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gp_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:text="@string/group_id"
+            android:textColor="#000000"
+            android:textSize="@dimen/ridealong_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gp_title" />
+
+        <TextView
+            android:id="@+id/gp_id_field"
+            android:layout_width="256dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/ridealong_grey"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/ridealong_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gp_id" />
+
+        <TextView
+            android:id="@+id/gp_tooltip"
+            android:layout_width="255dp"
+            android:layout_height="199dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/group_create_tooltip"
+            android:textSize="@dimen/ridealong_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gp_id_field" />
+
+        <Button
+            android:id="@+id/gp_button_create"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/ridealong_blue"
+            android:text="@string/create_group"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gp_tooltip" />
+
+        <Button
+            android:id="@+id/gp_button_cancel"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/ridealong_red"
+            android:text="@string/cancel_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gp_button_create" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

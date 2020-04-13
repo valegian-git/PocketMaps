@@ -10,6 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <include
+        layout="@layout/group_create"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <include layout="@layout/map_side_bar"/>
 
     <include layout="@layout/app_settings"/>

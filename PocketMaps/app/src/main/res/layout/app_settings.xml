@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/app_settings_layout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:background="@color/my_icons"
     android:fontFamily="sans-serif"
     android:orientation="vertical"
-    android:visibility="invisible"
-    >
+    android:visibility="invisible">
     <!--1.0 header-->
     <RelativeLayout
         android:id="@+id/app_settings_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/my_primary"
-        android:paddingBottom="8dp"
         android:paddingLeft="16dp"
+        android:paddingTop="8dp"
         android:paddingRight="16dp"
-        android:paddingTop="8dp">
+        android:paddingBottom="8dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="@string/settings"/>
+            android:text="@string/settings" />
 
         <ImageButton
             android:id="@+id/app_settings_clear_btn"
@@ -39,8 +37,7 @@
             android:clickable="true"
             android:focusable="true"
             android:padding="8dp"
-            android:src="@drawable/ic_keyboard_arrow_down_white_24dp"
-            />
+            android:src="@drawable/ic_keyboard_arrow_down_white_24dp" />
     </RelativeLayout>
 
     <!--2.0 change map-->
@@ -52,10 +49,10 @@
         android:focusable="true"
         android:gravity="left|center_vertical"
         android:orientation="horizontal"
-        android:paddingBottom="8dp"
         android:paddingLeft="16dp"
+        android:paddingTop="8dp"
         android:paddingRight="16dp"
-        android:paddingTop="8dp">
+        android:paddingBottom="8dp">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -65,15 +62,14 @@
             android:clickable="true"
             android:focusable="true"
             android:padding="8dp"
-            android:src="@drawable/ic_map_black_24dp"
-            />
+            android:src="@drawable/ic_map_black_24dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:text="@string/change_map"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
     </LinearLayout>
 
     <!-- Tracking -->
@@ -82,10 +78,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="8dp"
         android:paddingLeft="16dp"
+        android:paddingTop="8dp"
         android:paddingRight="16dp"
-        android:paddingTop="8dp">
+        android:paddingBottom="8dp">
 
         <LinearLayout
             android:id="@+id/app_settings_tracking"
@@ -103,15 +99,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:padding="8dp"
-                android:src="@drawable/ic_play_arrow_light_green_a700_24dp"
-                />
+                android:src="@drawable/ic_play_arrow_light_green_a700_24dp" />
 
             <TextView
                 android:id="@+id/app_settings_tracking_tv_tracking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tracking"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <!--on/off: stop / start-->
             <TextView
@@ -121,7 +116,7 @@
                 android:layout_marginLeft="20dp"
                 android:paddingLeft="5dp"
                 android:text="@string/tracking_start"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/app_settings_trackload_tv_switch"
@@ -130,7 +125,7 @@
                 android:layout_marginLeft="20dp"
                 android:paddingLeft="5dp"
                 android:text="@string/tracking_load"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
         </LinearLayout>
 
 
@@ -144,15 +139,13 @@
             android:gravity="left|center_vertical"
             android:orientation="horizontal"
             android:paddingLeft="60dp"
-            android:visibility="gone"
-            >
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="dis"
-                android:textSize="10dp"
-                />
+                android:textSize="10dp" />
             <!--distance-->
             <TextView
                 android:id="@+id/app_settings_tracking_tv_tracking_distance"
@@ -162,24 +155,21 @@
                 android:paddingRight="2dp"
                 android:text="0"
                 android:textColor="@color/my_primary_dark"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
             <!--distance unit km or m-->
             <TextView
                 android:id="@+id/app_settings_tracking_tv_tracking_distance_unit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="m"
-                android:textSize="10dp"
-                />
+                android:textSize="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:text="speed"
-                android:textSize="10dp"
-                />
+                android:textSize="10dp" />
             <!--speed-->
             <TextView
                 android:id="@+id/app_settings_tracking_tv_tracking_speed"
@@ -189,22 +179,19 @@
                 android:paddingRight="2dp"
                 android:text="0"
                 android:textColor="@color/my_primary_dark"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="km/h    Analytics ?"
-                android:textSize="12dp"
-                />
+                android:textSize="12dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:src="@drawable/ic_trending_up_light_green_a700_24dp"
-                />
+                android:src="@drawable/ic_trending_up_light_green_a700_24dp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -215,18 +202,18 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
-        
+
         <LinearLayout
             android:id="@+id/app_settings_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left|center_vertical"
             android:orientation="horizontal"
-            android:paddingBottom="0dp"
             android:paddingLeft="16dp"
+            android:paddingTop="8dp"
             android:paddingRight="16dp"
-            android:paddingTop="8dp">
-       
+            android:paddingBottom="0dp">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -235,15 +222,14 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:padding="8dp"
-                android:src="@drawable/ic_navigation_black_24dp"
-                />
-       
+                android:src="@drawable/ic_navigation_black_24dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/navigation"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
         </LinearLayout>
         <!--4.1 alternate route-->
         <LinearLayout
@@ -252,33 +238,32 @@
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
             android:orientation="horizontal"
-            android:paddingBottom="0dp"
             android:paddingLeft="16dp"
+            android:paddingTop="0dp"
             android:paddingRight="16dp"
-            android:paddingTop="0dp">
-       
+            android:paddingBottom="0dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/alternate_route"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
         </LinearLayout>
         <!--4.1  radio group: weighting-->
-        <RadioGroup
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/app_settings_weighting_rbtngroup"
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="60dp"
-            android:orientation="vertical"
             android:gravity="right"
-            android:paddingBottom="5dp"
+            android:orientation="vertical"
             android:paddingLeft="16dp"
+            android:paddingTop="0dp"
             android:paddingRight="16dp"
-            android:paddingTop="0dp">
-       
+            android:paddingBottom="5dp">
+
             <RadioButton
                 android:id="@+id/app_settings_fastest_rbtn"
                 android:layout_width="180dp"
@@ -286,8 +271,8 @@
                 android:button="@null"
                 android:drawableRight="@drawable/apptheme_btn_radio_holo_light"
                 android:text="@string/fastest"
-                android:textSize="14sp"/>
-       
+                android:textSize="14sp" />
+
             <RadioButton
                 android:id="@+id/app_settings_shortest_rbtn"
                 android:layout_width="180dp"
@@ -295,36 +280,36 @@
                 android:button="@null"
                 android:drawableRight="@drawable/apptheme_btn_radio_holo_light"
                 android:text="@string/shortest"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
         </RadioGroup>
-       
+
         <!-- directions -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
             android:orientation="horizontal"
-            android:paddingBottom="5dp"
             android:paddingLeft="16dp"
+            android:paddingTop="5dp"
             android:paddingRight="16dp"
-            android:paddingTop="5dp">
-       
+            android:paddingBottom="5dp">
+
             <TextView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/directions_navi"
-                android:textSize="14sp"/>
-       
+                android:textSize="14sp" />
+
             <CheckBox
                 android:id="@+id/app_settings_directions_cb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
-                android:gravity="right"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right" />
         </LinearLayout>
-       
+
         <!-- light_sensor -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -332,27 +317,27 @@
             android:layout_marginLeft="60dp"
             android:gravity="right|center_vertical"
             android:orientation="horizontal"
-            android:paddingBottom="5dp"
             android:paddingLeft="16dp"
+            android:paddingTop="5dp"
             android:paddingRight="16dp"
-            android:paddingTop="5dp">
-       
+            android:paddingBottom="5dp">
+
             <TextView
                 android:id="@+id/txt_light"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/light_navi"
-                android:textSize="14sp"/>
-       
+                android:textSize="14sp" />
+
             <CheckBox
                 android:id="@+id/app_settings_light"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="28dp"
-                android:checked="true"/>
+                android:checked="true" />
         </LinearLayout>
-       
+
         <!-- voice -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -360,27 +345,27 @@
             android:layout_marginLeft="60dp"
             android:gravity="right|center_vertical"
             android:orientation="horizontal"
-            android:paddingBottom="5dp"
             android:paddingLeft="16dp"
+            android:paddingTop="5dp"
             android:paddingRight="16dp"
-            android:paddingTop="5dp">
-       
+            android:paddingBottom="5dp">
+
             <TextView
                 android:id="@+id/txt_voice"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/voice_navi"
-                android:textSize="14sp"/>
-       
+                android:textSize="14sp" />
+
             <CheckBox
                 android:id="@+id/app_settings_voice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="28dp"
-                android:checked="true"/>
+                android:checked="true" />
         </LinearLayout>
-       
+
         <!-- Smoothen movement (Kalman Filter) -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -388,25 +373,25 @@
             android:layout_marginLeft="60dp"
             android:gravity="right|center_vertical"
             android:orientation="horizontal"
-            android:paddingBottom="5dp"
             android:paddingLeft="16dp"
+            android:paddingTop="5dp"
             android:paddingRight="16dp"
-            android:paddingTop="5dp">
-       
+            android:paddingBottom="5dp">
+
             <TextView
                 android:id="@+id/txt_smooth"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/gps_smooth"
-                android:textSize="14sp"/>
-       
+                android:textSize="14sp" />
+
             <CheckBox
                 android:id="@+id/app_settings_smooth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="28dp"
-                android:checked="false"/>
+                android:checked="false" />
         </LinearLayout>
     </LinearLayout>
 

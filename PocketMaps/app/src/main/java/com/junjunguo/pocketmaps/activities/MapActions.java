@@ -26,6 +26,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.junjunguo.pocketmaps.R;
 import com.junjunguo.pocketmaps.fragments.AppSettings;
 import com.junjunguo.pocketmaps.fragments.AppSettings.SettType;
+import com.junjunguo.pocketmaps.fragments.GroupDialog;
 import com.junjunguo.pocketmaps.fragments.InstructionAdapter;
 import com.junjunguo.pocketmaps.fragments.SpinnerAdapter;
 import com.junjunguo.pocketmaps.map.Destination;
@@ -43,6 +44,7 @@ import org.oscim.android.MapView;
 import org.oscim.core.GeoPoint;
 import org.oscim.core.MapPosition;
 
+import java.security.acl.Group;
 import java.util.ArrayList;
 
 /**
@@ -61,6 +63,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
     private TabAction tabAction = TabAction.None;
     private Activity activity;
     private AppSettings appSettings;
+    private GroupDialog groupDialog;
     protected FloatingActionButton showPositionBtn, navigationBtn, settingsBtn, settingsSetBtn, settingsNavBtn, controlBtn, favourBtn, groupBtn, groupCreateBtn, groupJoinBtn;
     protected FloatingActionButton zoomInBtn, zoomOutBtn;
     private ViewGroup sideBarVP, sideBarMenuVP, southBarSettVP, southBarFavourVP, southBarGroupVP ,navSettingsVP, navSettingsFromVP, navSettingsToVP,
@@ -100,6 +103,7 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
         MapHandler.getMapHandler().setMapHandlerListener(this);
         Navigator.getNavigator().addListener(this);
         appSettings = new AppSettings(activity);
+        groupDialog = new GroupDialog(activity);
         initControlBtnHandler();
         initZoomControlHandler(mapView);
         initShowMyLocation(mapView);
@@ -193,13 +197,14 @@ public class MapActions implements NavigatorListener, MapHandlerListener {
     private void initGroupBtnHandler() {
         groupJoinBtn.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                appSettings.showAppSettings(sideBarVP, SettType.Default);
+                //appSettings.showAppSettings(sideBarVP, SettType.Default);
             }
         });
 
         groupCreateBtn.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                appSettings.showAppSettings(sideBarVP, SettType.Default);
+                //appSettings.showAppSettings(sideBarVP, SettType.Default);
+                groupDialog.showGroupDialog(sideBarVP);
             }
         });
 
