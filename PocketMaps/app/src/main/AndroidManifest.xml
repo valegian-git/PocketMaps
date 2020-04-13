@@ -103,10 +103,10 @@
         <!-- RideAlong activities -->
         <activity
             android:name=".activities.ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
+            android:label="@string/ra_title_activity_login" />
         <activity
             android:name=".activities.ui.login.RegisterActivity"
-            android:label="@string/title_activity_register" />
+            android:label="@string/ra_title_activity_register" />
     </application>
 
 </manifest>

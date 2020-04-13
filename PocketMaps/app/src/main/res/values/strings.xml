@@ -78,28 +78,30 @@
     <string name="edit">Edit</string>
     <string name="help">Help</string>
 
-    <!-- RideAlong strings -->
-    <string name="title_activity_login">Login</string>
-    <string name="title_activity_register">Register</string>
-    <string name="title_activity_group_create">Group Create</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_email_confirmation">Email Confirmation</string>
-    <string name="prompt_password">Password</string>
-    <string name="prompt_password_confirmation">Password Confirmation</string>
-    <string name="prompt_username">Username</string>
-    <string name="action_sign_in">Login</string>
-    <string name="action_sign_in_short">Login</string>
-    <string name="action_register">Register</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="create_group">Create Group</string>
-    <string name="group_id">Group ID</string>
-    <string name="cancel_2">Cancel</string>
+
+    <!-- RideAlong strings -->
+    <string name="ra_title_activity_login">Login</string>
+    <string name="ra_title_activity_register">Register</string>
+    <string name="ra_title_activity_group_create">Group Create</string>
+    <string name="ra_prompt_email">Email</string>
+    <string name="ra_prompt_email_confirmation">Email Confirmation</string>
+    <string name="ra_prompt_password">Password</string>
+    <string name="ra_prompt_password_confirmation">Password Confirmation</string>
+    <string name="ra_prompt_username">Username</string>
+    <string name="ra_action_sign_in">Login</string>
+    <string name="ra_action_sign_in_short">Login</string>
+    <string name="ra_action_register">Register</string>
+    <string name="ra_create_group">Create Group</string>
+    <string name="ra_join_group">Join Group</string>
+    <string name="ra_group_id">Group ID</string>
+    <string name="ra_cancel">Cancel</string>
 
     <!-- RideAlong text -->
-    <string name="group_create_tooltip">
+    <string name="ra_group_create_tooltip">
         Select \'Create Group\' button below
         to create a new group.
         \n\n
