@@ -5,7 +5,9 @@
     android:id="@+id/group_join_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:visibility="invisible">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,9 +18,69 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="@grou"
+            android:text="@string/ra_join_group"
+            android:textColor="#000000"
+            android:textSize="@dimen/ridealong_title_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gj_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:text="@string/ra_group_id"
+            android:textColor="#000000"
+            android:textSize="@dimen/ridealong_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gj_title" />
+
+        <EditText
+            android:id="@+id/gj_id_field"
+            android:layout_width="256dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/ridealong_grey"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="@dimen/ridealong_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gj_id" />
+
+        <TextView
+            android:id="@+id/gj_tooltip"
+            android:layout_width="255dp"
+            android:layout_height="199dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/ra_group_join_tooltip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gj_id_field" />
+
+        <Button
+            android:id="@+id/gj_button_join"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/ridealong_blue"
+            android:text="@string/ra_join_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gj_tooltip" />
+
+        <Button
+            android:id="@+id/gj_button_cancel"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/ridealong_red"
+            android:text="@string/ra_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gj_button_join" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

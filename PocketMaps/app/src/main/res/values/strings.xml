@@ -110,4 +110,8 @@
         you are finished adding friends or
         have saved the code, press the ‘Done’ button below.
     </string>
+    <string name="ra_group_join_tooltip">
+        Enter a Group ID in the field above, then press
+        the \'Join Group\' button below.
+    </string>
 </resources>
